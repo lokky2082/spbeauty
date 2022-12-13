@@ -1,3 +1,31 @@
+:root {
+  --grey: #64748B;
+  --inp-bg: #F8FAFC;
+  --inp-border: 1px solid #E2E8F0;
+  --rad-base: 24px;
+  --text-base-color: #0F172A;
+  --primary-color: #3B82F6;
+  --primary-light: rgba(59, 130, 246, 0.8);
+  --base-light: rgba(15, 23, 42, 0.6);
+  --light-bg: #FFFFFF;
+  --btn-primary-bg-color: var(--primary-color);
+  --btn-primary-color: #ffffff;
+  --btn-primary-hover-bg: var(--primary-light);
+  --btn-primary-active-bg: var(--base-light);
+  --btn-secondary-border: 1px solid #64748B;
+  --btn-secondary-color: #64748B;
+  --btn-secondary-bg-color: var(--light-bg);
+  --btn-secondary-hover-bg: #F8FAFC;
+  --btn-secondary-active-bg: #F8FAFC;
+  --btn-rad: var(--rad-base);
+}
 body {
   margin: 0;
+}
+.grey-text {
+  color: var(--grey);
+}
+.sheet {
+  border: 1px solid rgba(100, 116, 139, 0.12);
+  border-radius: 8px;
 }

@@ -3,18 +3,21 @@ import styled from "styled-components";
 
 function SecondaryButton(props) {
     // Здесь устанавливается минимальная ширина для кнопки
-    let minWidth = props.minWidth === undefined ? '144px' : props.minWidth;
+    let minWidth = props.minWidth === undefined ? '217px' : props.minWidth;
     const Button = styled.div`
-        background: #F2F2F2;
-        border: 1px solid #DFDFDF;
-        box-shadow: inset 0px 1px 2px rgba(10, 15, 26, 0.08);
+        background: var(--btn-secondary-bg-color);
+        border: var(--btn-secondary-border);
+        border-radius: var(--btn-rad);
         min-width: ${minWidth};
-        color: #152842;
+        color: var(--btn-color);
+        font-weight: 500;
         &:hover {
-            background: linear-gradient(180deg, #DFEAF1 0%, #CFDDE8 100%);
+            border-color: transparent;
+            background: var(--btn-secondary-hover-bg);
         }
         &:active {
-            background: #DFDFDF;
+            border-color: transparent;
+            background:var(--btn-secondary-active-bg);
         }
     `;
     return (

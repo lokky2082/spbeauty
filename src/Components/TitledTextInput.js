@@ -2,23 +2,20 @@ import styled from "styled-components";
 
 const Input = styled.input`
     outline: none;
-    border-radius: 0px;
-    border: solid #152842 1px;
-    background-color: #D9E2EF;
-    color: #666787;
-    &:hover {
-        background-color: #D9E2EFB8;
-    }
+    border-radius: var(--rad-base);
+    border: var(--inp-border);
+    background-color: var(--inp-bg);
+    color: var(--text-base-color);
 `;
 
-function TitledTextInput({title, def}) {
+function TitledTextInput({title, def, placeholder}) {
     const Title = title === undefined ? 
         (<div></div>) : 
-        (<div>{title}</div>);
+        (<div className="caption grey-text">{title}</div>);
     return (
         <div className='d-flex flex-column gap-2'>
             {Title}
-            <Input className='p-2' defaultValue={def} ></Input>
+            <Input placeholder={placeholder} className='px-3 py-2' defaultValue={def} ></Input>
         </div>
     );
 }
